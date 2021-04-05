@@ -40,7 +40,7 @@ let validString12 = '341837331325004'
 
 const stringBatch = [validString1, validString2, validString3, validString4, validString5, validString6, validString7, validString8, validString9, validString10, validString11, validString12];
 
-// Add your functions below:
+// Checks if credit card number is valid.
 const validateCred = (arr) => {
     let check = (arr.length - 1) % 2;
     let newArr = [];
@@ -63,6 +63,7 @@ const validateCred = (arr) => {
     }
 }
 
+// Finds invalid numbers out of list of credit card numbers.
 const findInvalidCards = (arr) => {
     let invalidArr = [];
     for (i = 0; i < arr.length; i++) {
@@ -74,6 +75,7 @@ const findInvalidCards = (arr) => {
     return invalidArr;
 }
 
+// Finds out which credit card companies issued the invalid numbers.
 const idInvalidCardCompanies = (arr) => {
     let companiesArr = [];
     for (i = 0; i < arr.length; i++) {
@@ -93,6 +95,7 @@ const idInvalidCardCompanies = (arr) => {
     return companiesArr;
 }
 
+// Turns a credit card number string into an array.
 const stringToArr = (str) => {
     let arr = str.split('');
     for (i = 0; i < arr.length; i++) {
@@ -101,6 +104,7 @@ const stringToArr = (str) => {
     return arr;
 }
 
+// Turns invalid card numbers into valid ones.
 const invalidToValid = (arr) => {
     let check = (arr.length - 1) % 2;
     let newArr = [];
